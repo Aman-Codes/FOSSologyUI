@@ -32,6 +32,7 @@ import Login from "./pages/Login";
 import Overview from "./pages/Help/Overview";
 import LicenseBrowser from "./pages/Help/LicenseBrowser";
 import Instructions from "./pages/Upload/Instructions";
+import ThirdPartyLicenses from "./pages/Help/ThirdPartyLicenses";
 
 // Routes imports
 import { routes } from "./constants/routes";
@@ -52,6 +53,11 @@ const Routes = () => {
           exact
           path={routes.upload.instructions}
           component={Instructions}
+        />
+        <PublicLayout
+          exact
+          path={routes.help.thirdPartyLicenses}
+          component={ThirdPartyLicenses}
         />
         <PrivateLayout exact path={routes.search} component={Search} />
         <PrivateLayout exact path={routes.browse} component={Browse} />

@@ -50,5 +50,7 @@ export const routes = {
   help: {
     overview: "/help/overview",
     licenseBrowser: "/help/licenseBrowser",
+    thirdPartyLicenses: "/help/thirdPartyLicenses",
+    thirdPartyLicensesHTML: "/thirdPartyLicenses.html",
   },
 };

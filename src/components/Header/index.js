@@ -132,6 +132,9 @@ const Header = () => {
               >
                 Documentation
               </Dropdown.Item>
+              <Dropdown.Item as={Link} to={routes.help.thirdPartyLicenses}>
+                Third Party Licenses
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Dropdown drop="left">
