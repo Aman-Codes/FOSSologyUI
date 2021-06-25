@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2021 Aman Dwivedi (aman.dwivedi5@gmail.com)
+ Copyright (C) 2021 Shruti Agarwal (mail2shruti.ag@gmail.com)
 
  SPDX-License-Identifier: GPL-2.0
 
@@ -16,16 +16,17 @@
  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-const apiUrl = "http://localhost/repo/api/v1";
+import { searchFiles } from "../api/search";
 
-export const endpoints = {
-  jobs: {
-    details: (jobId) => `${apiUrl}/jobs/${jobId}`,
-  },
-  auth: {
-    tokens: () => `${apiUrl}/tokens`,
-  },
-  search: {
-    search: () => `${apiUrl}/search`,
-  },
-};
+export function search(searchData) {
+  return searchFiles(searchData).then((res) => {
+    // const { foldername, description, uploadname, uploaddate } = res.upload;
+    // const data = {
+    //   foldername,
+    //   description,
+    //   uploadname,
+    //   uploaddate,
+    // };
+    return res;
+  });
+}
